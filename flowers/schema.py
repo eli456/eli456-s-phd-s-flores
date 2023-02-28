@@ -7,6 +7,7 @@ class FlowerType(DjangoObjectType) :
     class Meta :
         model = Flower
 
+
 class Query(graphene.ObjectType) : 
     flowers = graphene.List(FlowerType)
     
