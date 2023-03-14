@@ -39,7 +39,15 @@ class CreateFlowers(graphene.Mutation) :
         direccion = graphene.String()
         
     def mutate(self, info,  nombreflor, tipo, color, cantidad, fecha, ocasion, precio, formadepago, existencias, direccion ) :
-        flor = Flower( nombreflor = nombreflor, tipo = tipo, color = color, cantidad = cantidad, fecha = fecha, ocasion = ocasion, precio = precio, formadepago = formadepago, existencias = existencias, direccion = direccion)
+        flor = Flower( nombreflor = nombreflor, 
+                      tipo = tipo, 
+                      color = color, 
+                      cantidad = cantidad, 
+                      fecha = fecha, 
+                      ocasion = ocasion, 
+                      precio = precio, 
+                      formadepago = formadepago, 
+                      existencias = existencias, direccion = direccion)
         flor.save()
         
         return CreateFlowers(
